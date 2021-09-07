@@ -8,14 +8,15 @@ M.ui = {
    italic_comments = false,
 
    -- theme to be used, to see all available themes, open the theme switcher by <leader> + th
-   theme = "onedark",
+   theme = "gruvbox",
 
-   -- theme toggler, toggle between two themes, see theme_toggleer mappings
+   -- theme toggler, toggle between two themes, see theme_toggler mappings
    theme_toggler = {
-      enabled = false,
+      enabled = true,
       fav_themes = {
          "onedark",
          "gruvchad",
+         "gruvbox"
       },
    },
 
@@ -55,8 +56,8 @@ M.options = {
    permanent_undo = true,
    shiftwidth = 2,
    smartindent = true,
-   tabstop = 8, -- Number of spaces that a <Tab> in the file counts for
-   timeoutlen = 400,
+   tabstop = 2, -- Number of spaces that a <Tab> in the file counts for
+   timeoutlen = 500,
    relativenumber = false,
    ruler = false,
    updatetime = 250,
@@ -79,8 +80,8 @@ M.plugin_status = {
    bufferline = true, -- buffer shown as tabs
    cheatsheet = true, -- fuzzy search your commands/keymappings
    colorizer = true,
-   comment = true, -- universal commentor
-   dashboard = false, -- a nice looking dashboard
+   comment = false, -- universal commentor
+   dashboard = true, -- a nice looking dashboard
    esc_insertmode = true, -- escape from insert mode using custom keys
    feline = true, -- statusline
    gitsigns = true, -- gitsigns in statusline
@@ -89,7 +90,7 @@ M.plugin_status = {
    neoscroll = true, -- smooth scroll
    telescope_media = false, -- see media files in telescope picker
    truezen = false, -- no distraction mode for nvim
-   vim_fugitive = false, -- git in nvim
+   vim_fugitive = true, -- git in nvim
    vim_matchup = true, -- % magic, match it but improved
 }
 
@@ -140,13 +141,9 @@ M.mappings = {
 -- to get short info about a plugin, see the respective string in plugin_status, if not present, then info here
 M.mappings.plugin = {
    bufferline = {
-      next_buffer = "<TAB>", -- next buffer
-      prev_buffer = "<S-Tab>", -- previous buffer
+      next_buffer = "<C-l>", -- next buffer
+      prev_buffer = "<C-h>", -- previous buffer
       --better window movement
-      moveLeft = "<C-h>",
-      moveRight = "<C-l>",
-      moveUp = "<C-k>",
-      moveDown = "<C-j>",
    },
    chadsheet = {
       default_keys = "<leader>dk",
