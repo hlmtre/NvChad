@@ -202,7 +202,11 @@ M.mappings.plugin = {
 -- keys: multiple keys allowed, same synxtax as modes
 -- cmd:  for vim commands, must use ':' at start and add <CR> at the end if want to execute
 -- options: see :h nvim_set_keymap() opts section
+local telescope = require("telescope")
+
 M.custom.mappings = {
+  telenext = { "i", "<C-j>", "cmd lua local a = require("telescope"); require("a.actions").move_selection_next()<CR>" },
+  teleprev = { "i", "<C-k>", "cmd lua local a = require("telescope"); require("a.actions").move_selection_previous()<CR>" },
    -- clear_all = {
    --    "n",
    --    "<leader>cc",
