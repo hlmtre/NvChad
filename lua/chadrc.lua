@@ -143,7 +143,6 @@ M.mappings.plugin = {
    bufferline = {
       next_buffer = "<C-l>", -- next buffer
       prev_buffer = "<C-h>", -- previous buffer
-      --better window movement
    },
    chadsheet = {
       default_keys = "<leader>dk",
